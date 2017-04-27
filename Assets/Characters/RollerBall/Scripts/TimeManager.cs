@@ -1,6 +1,6 @@
 ﻿//LMSC 281
 //Augustus Rivera
-//Roller Ball Mos
+//Roller Ball Mods
 //Time Manager Script
 
 using System.Collections;
@@ -26,16 +26,20 @@ public class TimeManager : MonoBehaviour {
 
 		timer -= Time.deltaTime;
 		text.text = "Timer: " + Mathf.RoundToInt(timer);
-
-
-	}
-
-	void RestartCurrentScene()
-	{
-		if (Time.deltaTime >= 5f) 
-		{
+		if (timer <= 0) {
+			timer = 0;
 			Application.LoadLevel (Application.loadedLevel);
 		}
+			
+
+
 	}
+
+	//void RestartCurrentScene(){
+		//if (Time.deltaTime >= 5f) 
+		//{
+			//Application.LoadLevel (Application.loadedLevel);
+		//}
+	//}
 }
 

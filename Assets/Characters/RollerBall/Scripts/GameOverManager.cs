@@ -22,9 +22,9 @@ public class GameOverManager : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.tag == "Player")
+		if(other.tag == "Player")   //if player runs into the goal
 		{
-			Application.LoadLevel(Application.loadedLevel);
+			Application.LoadLevel(Application.loadedLevel);  //restart the game
 		}
 	}
 }
